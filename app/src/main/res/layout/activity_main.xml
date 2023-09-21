@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <chenchen.engine.layout.SuperFrameLayout
+        android:id="@+id/sfl"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#983472"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sla_cornerRadius="20dp"
+        app:sla_shadowColor="#2980b9"
+        app:sla_shadowDx="20dp"
+        app:sla_shadowDy="10dp"
+        app:sla_shadowRadius="10dp" >
+
+        <TextView
+            android:text="555"
+            android:background="#347527"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </chenchen.engine.layout.SuperFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

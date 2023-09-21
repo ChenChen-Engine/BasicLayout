@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--设置圆形-->
+    <attr name="sla_isCircle" format="boolean" />
+    <!--设置四个角的圆角-->
+    <attr name="sla_cornerRadius" format="dimension" />
+    <!--设置左上角圆角-->
+    <attr name="sla_leftTopRadius" format="dimension" />
+    <!--设置右上角圆角-->
+    <attr name="sla_rightTopRadius" format="dimension" />
+    <!--设置左下角圆角-->
+    <attr name="sla_leftBottomRadius" format="dimension" />
+    <!--设置右下角圆角-->
+    <attr name="sla_rightBottomRadius" format="dimension" />
+    <!--设置边框宽度-->
+    <attr name="sla_strokeWidth" format="dimension" />
+    <!--设置边框颜色-->
+    <attr name="sla_strokeColor" format="color" />
+    <!--设置控件宽高比-->
+    <attr name="sla_aspectRatio" format="float" />
+    <!--是否可以触摸控件-->
+    <attr name="sla_isTouchable" format="boolean" />
+    <!--所有圆角、原型、边框、阴影效果计算是否需要包含Padding，默认true-->
+    <attr name="sla_isClipPadding" format="boolean" />
+    <!--适配状态栏-->
+    <attr name="sla_isFitSystemBar" format="boolean" />
+    <!--阴影颜色-->
+    <attr name="sla_shadowColor" format="color" />
+    <!--阴影圆角-->
+    <attr name="sla_shadowRadius" format="dimension" />
+    <!--阴影X轴偏移-->
+    <attr name="sla_shadowDx" format="dimension" />
+    <!--阴影Y轴偏移-->
+    <attr name="sla_shadowDy" format="dimension" />
+    <!--旋转间隔时间-->
+    <attr name="sla_rotate_interval_time" format="integer" />
+    <!--旋转角度-->
+    <attr name="sla_rotate_interval_degree" format="float" />
+    <!--旋转一次用时-->
+    <attr name="sla_rotate_duration" format="integer" />
+    <!--是否顺时针旋转-->
+    <attr name="sla_rotate_clockwise" format="boolean" />
+    <!--是否一直旋转-->
+    <attr name="sla_rotate_smooth" format="boolean" />
+    <!--是否自动开始旋转-->
+    <attr name="sla_rotate_auto_start" format="boolean" />
+    <!--是否开启选中功能，开启后就像CheckBox一样使用，不需要设置点击事件改变状态-->
+    <attr name="sla_isAutoCheckable" format="boolean" />
+    <!--是否支持父级传递过来的选中状态，已添加到父View的会收到传递，未添加到父View的，在添加的那刻也会自动获取到父View的选中状态-->
+    <attr name="sla_isReceiveCheckFromParent" format="boolean" />
+    <!--是否支持将选中状态传递给子级-->
+    <attr name="sla_isTransitiveCheckToChild" format="boolean" />
+    <!--设置宽高比的方向-->
+    <attr name="sla_fixOrientation" format="enum">
+        <enum name="horizontal" value="0" />
+        <enum name="vertical" value="1" />
+    </attr>
+
+    <declare-styleable name="SuperLayoutAttrs">
+        <!--设置圆形-->
+        <attr name="sla_isCircle" />
+        <!--设置四个角的圆角-->
+        <attr name="sla_cornerRadius" />
+        <!--设置左上角圆角-->
+        <attr name="sla_leftTopRadius" />
+        <!--设置右上角圆角-->
+        <attr name="sla_rightTopRadius" />
+        <!--设置左下角圆角-->
+        <attr name="sla_leftBottomRadius" />
+        <!--设置右下角圆角-->
+        <attr name="sla_rightBottomRadius" />
+        <!--设置边框宽度-->
+        <attr name="sla_strokeWidth" />
+        <!--设置边框颜色-->
+        <attr name="sla_strokeColor" />
+        <!--设置控件宽高比-->
+        <attr name="sla_aspectRatio" />
+        <!--是否可以触摸控件-->
+        <attr name="sla_isTouchable" />
+        <!--所有圆角、原型、边框、阴影效果计算是否需要适配Padding，默认true-->
+        <attr name="sla_isClipPadding" />
+        <!--适配状态栏-->
+        <attr name="sla_isFitSystemBar" />
+        <!--阴影颜色-->
+        <attr name="sla_shadowColor" />
+        <!--阴影圆角-->
+        <attr name="sla_shadowRadius" />
+        <!--阴影X轴偏移-->
+        <attr name="sla_shadowDx" />
+        <!--阴影Y轴偏移-->
+        <attr name="sla_shadowDy" />
+        <!--旋转间隔时间-->
+        <attr name="sla_rotate_interval_time" />
+        <!--旋转角度-->
+        <attr name="sla_rotate_interval_degree" />
+        <!--旋转一次用时-->
+        <attr name="sla_rotate_duration" />
+        <!--是否顺时针旋转-->
+        <attr name="sla_rotate_clockwise" />
+        <!--是否一直旋转-->
+        <attr name="sla_rotate_smooth" />
+        <!--是否自动开始旋转-->
+        <attr name="sla_rotate_auto_start" />
+        <!--是否开启自动选中功能，开启后就像CheckBox一样使用，不需要设置点击事件改变状态，不开启则需要手动设置状态-->
+        <attr name="sla_isAutoCheckable" />
+        <!--是否支持父级传递过来的选中状态，已添加到父View的会收到传递，未添加到父View的，在添加的那刻也会自动获取到父View的选中状态-->
+        <attr name="sla_isReceiveCheckFromParent" />
+        <!--是否支持将选中状态传递给子级-->
+        <attr name="sla_isTransitiveCheckToChild" />
+        <!--设置宽高比的方向-->
+        <attr name="sla_fixOrientation" />
+    </declare-styleable>
+
+    <declare-styleable name="SuperConstraintLayout">
+        <!--设置圆形-->
+        <attr name="sla_isCircle" />
+        <!--设置四个角的圆角-->
+        <attr name="sla_cornerRadius" />
+        <!--设置左上角圆角-->
+        <attr name="sla_leftTopRadius" />
+        <!--设置右上角圆角-->
+        <attr name="sla_rightTopRadius" />
+        <!--设置左下角圆角-->
+        <attr name="sla_leftBottomRadius" />
+        <!--设置右下角圆角-->
+        <attr name="sla_rightBottomRadius" />
+        <!--设置边框宽度-->
+        <attr name="sla_strokeWidth" />
+        <!--设置边框颜色-->
+        <attr name="sla_strokeColor" />
+        <!--设置控件宽高比-->
+        <attr name="sla_aspectRatio" />
+        <!--是否可以触摸控件-->
+        <attr name="sla_isTouchable" />
+        <!--所有圆角、原型、边框、阴影效果计算是否需要适配Padding，默认true-->
+        <attr name="sla_isClipPadding" />
+        <!--适配状态栏-->
+        <attr name="sla_isFitSystemBar" />
+        <!--阴影颜色-->
+        <attr name="sla_shadowColor" />
+        <!--阴影圆角-->
+        <attr name="sla_shadowRadius" />
+        <!--阴影X轴偏移-->
+        <attr name="sla_shadowDx" />
+        <!--阴影Y轴偏移-->
+        <attr name="sla_shadowDy" />
+        <!--旋转间隔时间-->
+        <attr name="sla_rotate_interval_time" />
+        <!--旋转角度-->
+        <attr name="sla_rotate_interval_degree" />
+        <!--旋转一次用时-->
+        <attr name="sla_rotate_duration" />
+        <!--是否顺时针旋转-->
+        <attr name="sla_rotate_clockwise" />
+        <!--是否一直旋转-->
+        <attr name="sla_rotate_smooth" />
+        <!--是否自动开始旋转-->
+        <attr name="sla_rotate_auto_start" />
+        <!--是否开启选中功能，开启后就像CheckBox一样使用，不需要设置点击事件改变状态-->
+        <attr name="sla_isAutoCheckable" />
+        <!--是否支持父级传递过来的选中状态，已添加到父View的会收到传递，未添加到父View的，在添加的那刻也会自动获取到父View的选中状态-->
+        <attr name="sla_isReceiveCheckFromParent" />
+        <!--是否支持将选中状态传递给子级-->
+        <attr name="sla_isTransitiveCheckToChild" />
+        <!--设置宽高比的方向-->
+        <attr name="sla_fixOrientation" />
+    </declare-styleable>
+
+    <declare-styleable name="SuperFrameLayout">
+        <!--设置圆形-->
+        <attr name="sla_isCircle" />
+        <!--设置四个角的圆角-->
+        <attr name="sla_cornerRadius" />
+        <!--设置左上角圆角-->
+        <attr name="sla_leftTopRadius" />
+        <!--设置右上角圆角-->
+        <attr name="sla_rightTopRadius" />
+        <!--设置左下角圆角-->
+        <attr name="sla_leftBottomRadius" />
+        <!--设置右下角圆角-->
+        <attr name="sla_rightBottomRadius" />
+        <!--设置边框宽度-->
+        <attr name="sla_strokeWidth" />
+        <!--设置边框颜色-->
+        <attr name="sla_strokeColor" />
+        <!--设置控件宽高比-->
+        <attr name="sla_aspectRatio" />
+        <!--是否可以触摸控件-->
+        <attr name="sla_isTouchable" />
+        <!--所有圆角、原型、边框、阴影效果计算是否需要适配Padding，默认true-->
+        <attr name="sla_isClipPadding" />
+        <!--适配状态栏-->
+        <attr name="sla_isFitSystemBar" />
+        <!--阴影颜色-->
+        <attr name="sla_shadowColor" />
+        <!--阴影圆角-->
+        <attr name="sla_shadowRadius" />
+        <!--阴影X轴偏移-->
+        <attr name="sla_shadowDx" />
+        <!--阴影Y轴偏移-->
+        <attr name="sla_shadowDy" />
+        <!--旋转间隔时间-->
+        <attr name="sla_rotate_interval_time" />
+        <!--旋转角度-->
+        <attr name="sla_rotate_interval_degree" />
+        <!--旋转一次用时-->
+        <attr name="sla_rotate_duration" />
+        <!--是否顺时针旋转-->
+        <attr name="sla_rotate_clockwise" />
+        <!--是否一直旋转-->
+        <attr name="sla_rotate_smooth" />
+        <!--是否自动开始旋转-->
+        <attr name="sla_rotate_auto_start" />
+        <!--是否开启选中功能，开启后就像CheckBox一样使用，不需要设置点击事件改变状态-->
+        <attr name="sla_isAutoCheckable" />
+        <!--是否支持父级传递过来的选中状态，已添加到父View的会收到传递，未添加到父View的，在添加的那刻也会自动获取到父View的选中状态-->
+        <attr name="sla_isReceiveCheckFromParent" />
+        <!--是否支持将选中状态传递给子级-->
+        <attr name="sla_isTransitiveCheckToChild" />
+        <!--设置宽高比的方向-->
+        <attr name="sla_fixOrientation" />
+    </declare-styleable>
+
+    <declare-styleable name="SuperLinearLayout">
+        <!--设置圆形-->
+        <attr name="sla_isCircle" />
+        <!--设置四个角的圆角-->
+        <attr name="sla_cornerRadius" />
+        <!--设置左上角圆角-->
+        <attr name="sla_leftTopRadius" />
+        <!--设置右上角圆角-->
+        <attr name="sla_rightTopRadius" />
+        <!--设置左下角圆角-->
+        <attr name="sla_leftBottomRadius" />
+        <!--设置右下角圆角-->
+        <attr name="sla_rightBottomRadius" />
+        <!--设置边框宽度-->
+        <attr name="sla_strokeWidth" />
+        <!--设置边框颜色-->
+        <attr name="sla_strokeColor" />
+        <!--设置控件宽高比-->
+        <attr name="sla_aspectRatio" />
+        <!--是否可以触摸控件-->
+        <attr name="sla_isTouchable" />
+        <!--所有圆角、原型、边框、阴影效果计算是否需要适配Padding，默认true-->
+        <attr name="sla_isClipPadding" />
+        <!--适配状态栏-->
+        <attr name="sla_isFitSystemBar" />
+        <!--阴影颜色-->
+        <attr name="sla_shadowColor" />
+        <!--阴影圆角-->
+        <attr name="sla_shadowRadius" />
+        <!--阴影X轴偏移-->
+        <attr name="sla_shadowDx" />
+        <!--阴影Y轴偏移-->
+        <attr name="sla_shadowDy" />
+        <!--旋转间隔时间-->
+        <attr name="sla_rotate_interval_time" />
+        <!--旋转角度-->
+        <attr name="sla_rotate_interval_degree" />
+        <!--旋转一次用时-->
+        <attr name="sla_rotate_duration" />
+        <!--是否顺时针旋转-->
+        <attr name="sla_rotate_clockwise" />
+        <!--是否一直旋转-->
+        <attr name="sla_rotate_smooth" />
+        <!--是否自动开始旋转-->
+        <attr name="sla_rotate_auto_start" />
+        <!--是否开启选中功能，开启后就像CheckBox一样使用，不需要设置点击事件改变状态-->
+        <attr name="sla_isAutoCheckable" />
+        <!--是否支持父级传递过来的选中状态，已添加到父View的会收到传递，未添加到父View的，在添加的那刻也会自动获取到父View的选中状态-->
+        <attr name="sla_isReceiveCheckFromParent" />
+        <!--是否支持将选中状态传递给子级-->
+        <attr name="sla_isTransitiveCheckToChild" />
+        <!--设置宽高比的方向-->
+        <attr name="sla_fixOrientation" />
+    </declare-styleable>
+
+    <declare-styleable name="SuperRelativeLayout">
+        <!--设置圆形-->
+        <attr name="sla_isCircle" />
+        <!--设置四个角的圆角-->
+        <attr name="sla_cornerRadius" />
+        <!--设置左上角圆角-->
+        <attr name="sla_leftTopRadius" />
+        <!--设置右上角圆角-->
+        <attr name="sla_rightTopRadius" />
+        <!--设置左下角圆角-->
+        <attr name="sla_leftBottomRadius" />
+        <!--设置右下角圆角-->
+        <attr name="sla_rightBottomRadius" />
+        <!--设置边框宽度-->
+        <attr name="sla_strokeWidth" />
+        <!--设置边框颜色-->
+        <attr name="sla_strokeColor" />
+        <!--设置控件宽高比-->
+        <attr name="sla_aspectRatio" />
+        <!--是否可以触摸控件-->
+        <attr name="sla_isTouchable" />
+        <!--所有圆角、原型、边框、阴影效果计算是否需要适配Padding，默认true-->
+        <attr name="sla_isClipPadding" />
+        <!--适配状态栏-->
+        <attr name="sla_isFitSystemBar" />
+        <!--阴影颜色-->
+        <attr name="sla_shadowColor" />
+        <!--阴影圆角-->
+        <attr name="sla_shadowRadius" />
+        <!--阴影X轴偏移-->
+        <attr name="sla_shadowDx" />
+        <!--阴影Y轴偏移-->
+        <attr name="sla_shadowDy" />
+        <!--旋转间隔时间-->
+        <attr name="sla_rotate_interval_time" />
+        <!--旋转角度-->
+        <attr name="sla_rotate_interval_degree" />
+        <!--旋转一次用时-->
+        <attr name="sla_rotate_duration" />
+        <!--是否顺时针旋转-->
+        <attr name="sla_rotate_clockwise" />
+        <!--是否一直旋转-->
+        <attr name="sla_rotate_smooth" />
+        <!--是否自动开始旋转-->
+        <attr name="sla_rotate_auto_start" />
+        <!--是否开启选中功能，开启后就像CheckBox一样使用，不需要设置点击事件改变状态-->
+        <attr name="sla_isAutoCheckable" />
+        <!--是否支持父级传递过来的选中状态，已添加到父View的会收到传递，未添加到父View的，在添加的那刻也会自动获取到父View的选中状态-->
+        <attr name="sla_isReceiveCheckFromParent" />
+        <!--是否支持将选中状态传递给子级-->
+        <attr name="sla_isTransitiveCheckToChild" />
+        <!--设置宽高比的方向-->
+        <attr name="sla_fixOrientation" />
+    </declare-styleable>
+
+    <declare-styleable name="SuperView">
+        <!--设置圆形-->
+        <attr name="sla_isCircle" />
+        <!--设置四个角的圆角-->
+        <attr name="sla_cornerRadius" />
+        <!--设置左上角圆角-->
+        <attr name="sla_leftTopRadius" />
+        <!--设置右上角圆角-->
+        <attr name="sla_rightTopRadius" />
+        <!--设置左下角圆角-->
+        <attr name="sla_leftBottomRadius" />
+        <!--设置右下角圆角-->
+        <attr name="sla_rightBottomRadius" />
+        <!--设置边框宽度-->
+        <attr name="sla_strokeWidth" />
+        <!--设置边框颜色-->
+        <attr name="sla_strokeColor" />
+        <!--设置控件宽高比-->
+        <attr name="sla_aspectRatio" />
+        <!--是否可以触摸控件-->
+        <attr name="sla_isTouchable" />
+        <!--所有圆角、原型、边框、阴影效果计算是否需要适配Padding，默认true-->
+        <attr name="sla_isClipPadding" />
+        <!--适配状态栏-->
+        <attr name="sla_isFitSystemBar" />
+        <!--阴影颜色-->
+        <attr name="sla_shadowColor" />
+        <!--阴影圆角-->
+        <attr name="sla_shadowRadius" />
+        <!--阴影X轴偏移-->
+        <attr name="sla_shadowDx" />
+        <!--阴影Y轴偏移-->
+        <attr name="sla_shadowDy" />
+        <!--旋转间隔时间-->
+        <attr name="sla_rotate_interval_time" />
+        <!--旋转角度-->
+        <attr name="sla_rotate_interval_degree" />
+        <!--旋转一次用时-->
+        <attr name="sla_rotate_duration" />
+        <!--是否顺时针旋转-->
+        <attr name="sla_rotate_clockwise" />
+        <!--是否一直旋转-->
+        <attr name="sla_rotate_smooth" />
+        <!--是否自动开始旋转-->
+        <attr name="sla_rotate_auto_start" />
+        <!--是否开启选中功能，开启后就像CheckBox一样使用，不需要设置点击事件改变状态-->
+        <attr name="sla_isAutoCheckable" />
+        <!--是否支持父级传递过来的选中状态，已添加到父View的会收到传递，未添加到父View的，在添加的那刻也会自动获取到父View的选中状态-->
+        <attr name="sla_isReceiveCheckFromParent" />
+        <!--是否支持将选中状态传递给子级-->
+        <attr name="sla_isTransitiveCheckToChild" />
+        <!--设置宽高比的方向-->
+        <attr name="sla_fixOrientation" />
+    </declare-styleable>
+
+</resources>
